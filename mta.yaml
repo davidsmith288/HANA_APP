@@ -25,6 +25,13 @@ modules:
       - name: core_xsjs_api
         properties:
           url: '${default-url}'
+
+  - name: hsa1
+    type: sds
+    path: streaming/hsa1
+    requires:
+     - name: sds-container
+
 resources:
   - name: UAA-service
     type: com.sap.xs.uaa-space
@@ -37,3 +44,7 @@ resources:
     properties:
       hdi-container-name: '${service-name}'
     type: com.sap.xs.hdi-container
+
+  - name: sds-container
+    type: com.sap.xs.sds
+
