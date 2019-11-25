@@ -32,6 +32,13 @@ modules:
     requires:
      - name: sds-container
 
+
+  - name: hsa2
+    type: sds
+    path: streaming/hsa2
+    requires:
+     - name: sds-container_2
+
 resources:
   - name: UAA-service
     type: com.sap.xs.uaa-space
@@ -46,5 +53,9 @@ resources:
     type: com.sap.xs.hdi-container
 
   - name: sds-container
+    type: com.sap.xs.sds
+
+
+  - name: sds-container_2
     type: com.sap.xs.sds
 
